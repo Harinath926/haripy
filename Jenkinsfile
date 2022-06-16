@@ -71,8 +71,7 @@ DOCKERHUB_CREDENTIALS = credentials('DOCKER')
        }
         stage('helm') {
             steps {
-                sh 'helm create haripy'
-                sh 'helm install haripy .'
+                sh 'helm upgrade --install new new'
         }
     }
  }

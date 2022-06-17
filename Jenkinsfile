@@ -68,6 +68,10 @@ DOCKERHUB_CREDENTIALS = credentials('DOCKER')
                 sh 'cp linux-amd64/helm /usr/bin'
                 sh 'helm version'
             }
-       }
+       }stage('helm') {
+            steps {
+                sh 'helm upgrade --install new new'
+        }
+    }
  }
 }

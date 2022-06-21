@@ -61,6 +61,17 @@ DOCKERHUB_CREDENTIALS = credentials('DOCKER')
             sh 'docker push harinath926/haripy'
            }
     }
+    stage('Deploy'){
+
+    steps{
+
+            sh 'kubectl apply -f deployment.yml'
+
+             sh 'kubectl apply -f service.yml'
+
+        }
+
+    }
     stage("install helm"){
            steps {
                 sh 'wget https://get.helm.sh/helm-v3.6.1-linux-amd64.tar.gz'

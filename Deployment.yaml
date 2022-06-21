@@ -1,22 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: haripy
+  name: myapp
 spec:
   selector:
     matchLabels:
-      app: haripy
+      app: myapp
   template:
     metadata:
       labels:
-        app: haripy
+        app: myapp
     spec:
       containers:
-      - name: haripy
-        image: harinath926/haripy
+      - name: myapp
+        image: harinath926/python
         resources:
           limits:
             memory: "128Mi"
             cpu: "500m"
-        ports:
-        - containerPort: 5002
+

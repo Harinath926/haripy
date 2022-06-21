@@ -78,5 +78,11 @@ DOCKERHUB_CREDENTIALS = credentials('DOCKER')
                 sh 'helm version'
             }
        }
+       stage('helm') {
+            steps {
+                        sh 'helm version'
+                        sh 'helm upgrade --install new1 new'
+      }
+    }
  }
 }

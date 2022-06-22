@@ -4,4 +4,4 @@ ADD new.py .
 
 RUN pip install elasticsearch sendgrid
 
-CMD ["python", "new.py", "sleep 100"]
+CMD ["python", "new.py"]

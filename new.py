@@ -10,7 +10,7 @@ mail = sendgrid.SendGridAPIClient('SG.aietWRW8Tu2X2R3i4THjBA.4BrBiodqvUm-kYg1sak
 
 esconnector = Elasticsearch(
 
-    "http://10.101.60.86:32315/")
+    "http://10.105.58.188:30790/")
 
    
 
@@ -18,7 +18,7 @@ esconnector = Elasticsearch(
 
 message = sendgrid.Mail(
 
-                from_email='harinath.kavuri@perigorddata.com',
+                from_email='harinath.kavuri@gmail.com',
 
                 to_emails='anandsadhu@perigorddata.com',
 

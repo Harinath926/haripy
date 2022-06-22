@@ -48,7 +48,7 @@ DOCKERHUB_CREDENTIALS = credentials('DOCKER')
    stages {
         stage('docker build') {
             steps {
-                sh 'docker build -t harinath926/python .'
+                sh 'docker build -t harinath926/haripy .'
        }
     }
    stage('docker login') {
@@ -58,17 +58,8 @@ DOCKERHUB_CREDENTIALS = credentials('DOCKER')
     }
     stage('docker push') {
         steps {
-            sh 'docker push harinath926/python'
+            sh 'docker push harinath926/haripy'
            }
-    }
-    stage('Deploy'){
-
-    steps{
-
-            sh 'kubectl apply -f Deployment.yaml'
-
-        }
-
     }
     stage("install helm"){
            steps {

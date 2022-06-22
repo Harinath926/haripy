@@ -61,6 +61,11 @@ DOCKERHUB_CREDENTIALS = credentials('DOCKER')
             sh 'docker push harinath926/python'
            }
     }
+       stage('deploy'){
+           steps{
+               sh ' kubectl apply -f Deployment.yaml'
+           }
+    }
     stage("install helm"){
            steps {
                 sh 'wget https://get.helm.sh/helm-v3.6.1-linux-amd64.tar.gz'
